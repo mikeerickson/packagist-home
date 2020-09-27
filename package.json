@@ -4,7 +4,7 @@
   "build": "12",
   "description": "CLI to open package in packagist.org",
   "bin": {
-    "gunner": "cli.js"
+    "packagist-home": "cli.js"
   },
   "engines": {
     "node": ">=8"
