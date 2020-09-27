@@ -1,0 +1,4 @@
+tasks/
+CHANGELOG.md
+prettier.config.js
+test.js

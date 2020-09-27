@@ -1,21 +1,43 @@
 {
   "name": "@codedungeon/packagist-home",
   "version": "1.0.0",
+  "build": "12",
   "description": "CLI to open package in packagist.org",
-  "bin": "cli.js",
+  "bin": {
+    "gunner": "cli.js"
+  },
   "engines": {
     "node": ">=8"
   },
   "files": [
     "cli.js"
   ],
+  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "repository": "https://github.com/mikeerickson/packagist-home",
+  "contributors": [
+    {
+      "name": "Mike Erickson",
+      "email": "mike.erickson@codedungeon.io",
+      "url": "https://github.com/mikeerickson"
+    }
+  ],
   "scripts": {
+    "bump": "./tasks/bumpBuild.js",
+    "bump:dev": "./tasks/bumpBuild.js --verbose",
+    "publish": "./tasks/publish.js",
     "test": "ava"
   },
-  "keywords": [],
-  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "keywords": [
+    "cli",
+    "php",
+    "packagist",
+    "open",
+    "repo",
+    "package"
+  ],
   "license": "MIT",
   "dependencies": {
+    "@codedungeon/messenger": "0.7.0",
     "ava": "3.12.1",
     "colors": "1.4.0",
     "execa": "4.0.3",

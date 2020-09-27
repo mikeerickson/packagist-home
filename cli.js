@@ -8,6 +8,7 @@ const open = require("open")
 const path = require("path")
 const execa = require("execa")
 const colors = require("colors")
+const Messenger = require("@codedungeon/messenger")
 
 const cli = meow(`
 	Usage
@@ -35,13 +36,13 @@ const repo = cli.input[0]
                 composerInfo = JSON.parse(jsonString)
             }
         } catch (err) {
-            console.log(colors.error(err))
+            Messenger.error(err, "ERROR")
         }
 
         let pkgName = composerInfo.name
         if (pkgName.length === 0) {
             console.log("")
-            console.error(colors.red("Couldn't find the project composer.json, or supply package name."))
+            Messenger.error("Couldn't find the project composer.json, or supply package name.", "ERROR")
             process.exit(1)
         }
         let url = `https://packagist.org/packages/${pkgName}`

@@ -1,2 +1,6 @@
-node_modules/
+.idea/
 sandbox/
+./vscode
+.vscode/
+*.taskpaper
+node_modules/
