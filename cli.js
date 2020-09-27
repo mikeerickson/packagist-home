@@ -42,7 +42,7 @@ const repo = cli.input[0]
         let pkgName = composerInfo.name
         if (pkgName.length === 0) {
             console.log("")
-            Messenger.error("Couldn't find the project composer.json, or supply package name.", "ERROR")
+            Messenger.error("Couldn't find the project composer.json, or supplied package name.", "ERROR")
             process.exit(1)
         }
         let url = `https://packagist.org/packages/${pkgName}`
