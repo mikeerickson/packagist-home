@@ -1,6 +1,6 @@
 {
   "name": "@codedungeon/packagist-home",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "build": "12",
   "description": "CLI to open package in packagist.org",
   "bin": {
