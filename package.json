@@ -1,0 +1,28 @@
+{
+  "name": "@codedungeon/packagist-home",
+  "version": "1.0.0",
+  "description": "CLI to open package in packagist.org",
+  "bin": "cli.js",
+  "engines": {
+    "node": ">=8"
+  },
+  "files": [
+    "cli.js"
+  ],
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [],
+  "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
+  "license": "MIT",
+  "dependencies": {
+    "ava": "3.12.1",
+    "colors": "1.4.0",
+    "execa": "4.0.3",
+    "git-remote-origin-url": "3.1.0",
+    "git-remote-upstream-url": "2.0.0",
+    "github-url-from-git": "1.5.0",
+    "meow": "7.1.1",
+    "open": "7.2.1"
+  }
+}
