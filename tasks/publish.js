@@ -41,7 +41,7 @@ Messenger.success(`✓ Creating Github tag ${version}`)
 console.log("")
 
 if (!_TESTING) {
-    let result = execSync('git tag "${version}" && git push --tags --quiet')
+    let result = execSync(`git tag "${version}" && git push --tags --quiet`)
     console.log(result.toString())
 } else {
     Messenger.note("*** TESTING MODE Publishing Command Skipped ***")

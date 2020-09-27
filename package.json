@@ -24,6 +24,8 @@
   "scripts": {
     "bump": "./tasks/bumpBuild.js",
     "bump:dev": "./tasks/bumpBuild.js --verbose",
+    "lint": "eslint \"./**/*.{ts,js,vue}\"",
+    "lint:fix": "eslint \"./**/*.{ts,js,vue}\" --fix",
     "publish": "./tasks/publish.js",
     "test": "ava"
   },
