@@ -4,3 +4,4 @@ sandbox/
 .vscode/
 *.taskpaper
 node_modules/
+composer.json
