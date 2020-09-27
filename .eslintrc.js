@@ -19,8 +19,8 @@ module.exports = {
         },
     },
     rules: {
-        indent: ["error", 2],
-        quotes: ["error", "single"],
+        indent: ["error", 4],
+        quotes: ["error", "double"],
         semi: ["error", "never"],
         "no-unused-vars": "off",
         "no-undef": "off",
