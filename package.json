@@ -2,16 +2,13 @@
   "name": "@codedungeon/packagist-home",
   "version": "1.0.2",
   "build": "12",
-  "description": "CLI to open package in packagist.org",
+  "description": "Open the packagist.org page of the supplied project or current directory project",
   "bin": {
-    "packagist-home": "cli.js"
+    "packagist-home": "lib/cli.js"
   },
   "engines": {
     "node": ">=8"
   },
-  "files": [
-    "cli.js"
-  ],
   "author": "Mike Erickson <codedungeon@gmail.com> (https://github.com/mikeerickson)",
   "repository": "https://github.com/mikeerickson/packagist-home",
   "contributors": [
@@ -22,11 +19,13 @@
     }
   ],
   "scripts": {
+    "cli": "./lib/cli.js",
     "bump": "./tasks/bumpBuild.js",
     "bump:dev": "./tasks/bumpBuild.js --verbose",
-    "lint": "eslint \"./**/*.{ts,js,vue}\"",
+    "lint": "./tasks/lint.js",
     "lint:fix": "eslint \"./**/*.{ts,js,vue}\" --fix",
     "publish": "./tasks/publish.js",
+    "pre-commit": "npm run test && npm run install",
     "test": "ava"
   },
   "keywords": [
@@ -40,13 +39,12 @@
   "license": "MIT",
   "dependencies": {
     "@codedungeon/messenger": "0.7.0",
-    "ava": "3.12.1",
     "colors": "1.4.0",
     "execa": "4.0.3",
-    "git-remote-origin-url": "3.1.0",
-    "git-remote-upstream-url": "2.0.0",
-    "github-url-from-git": "1.5.0",
     "meow": "7.1.1",
     "open": "7.2.1"
+  },
+  "devDependencies": {
+    "ava": "3.12.1"
   }
 }
